@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "acsreactappnew",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\Anagha\\AWS_Amplify\\acsreactappnew\\amplify\\backend\\api\\acsreactappnew\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
