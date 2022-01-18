@@ -10,20 +10,20 @@ class CreatePosts extends Component {
         postTitle:"",
         postBody:""
     }
-    componentDidMount = async ()=>{
-        this.getPosts()
-        this.createPostListener = API.graphql(graphqlOperation(onCreatePost)).subscribe({
-            next: postData =>{
-                const newPost = postData.value.data.onCreatePost
-                const prevPosts=this.state.post.filter(post =>post.id !== new post.id )
-                const updatedPosts = [newPost, ...prevPosts]
-                this.setSatet({posts:updatedPosts})
-            }})
+    // componentDidMount = async ()=>{
+    //     this.getPosts()
+    //     this.createPostListener = API.graphql(graphqlOperation(onCreatePost)).subscribe({
+    //         next: postData =>{
+    //             const newPost = postData.value.data.onCreatePost
+    //             const prevPosts=this.state.post.filter(post =>post.id !== new post.id )
+    //             const updatedPosts = [newPost, ...prevPosts]
+    //             this.setSatet({posts:updatedPosts})
+    //         }})
         
-    }
-    componentWillUnmount (){
-        this.createPostListener.unsubscribe()
-    }
+    // }
+    // componentWillUnmount (){
+    //     this.createPostListener.unsubscribe()
+    // }
     handleChangePost = event => this.setState({
         [event.target.name]:event.target.value})
 
